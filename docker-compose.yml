@@ -1,0 +1,17 @@
+services:
+  smartsql-web:
+    build: .
+    container_name: smartsql_agent_ui
+    ports:
+      - "8501:8501"
+    volumes:
+      # Montamos la carpeta data para que la base de datos no se borre si apagamos Docker
+      - ./data:/app/data
+    env_file:
+      - .env  # Carga tus API Keys (OpenAI) si las usas
+    environment:
+      # TRUCO: Le dice a LangChain/Ollama dentro de Docker dónde está tu Ollama real en Linux
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+    extra_hosts:
+      # Permite que Docker en Linux se comunique con "localhost" de tu máquina real
+      - "host.docker.internal:host-gateway"

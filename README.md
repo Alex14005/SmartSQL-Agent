@@ -71,3 +71,7 @@ streamlit run app.py
 ## Evaluación Automática (LLMOps)
 Para medir el rendimiento del agente antes de pasarlo a producción, corre el script de evaluación basado en RAGAS. Este script enviará un set de preguntas predefinidas al agente, recolectará sus respuestas y las evaluará usando IA.
 python evaluation/run_eval.py
+
+## Dedspliegue con Docker
+### Asegurarse de tener docker instalado y desplegarlo simplemente con:
+sudo docker compose up --build

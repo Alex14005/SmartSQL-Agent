@@ -27,10 +27,13 @@ def get_llm(provider: str = "ollama", temperature: float = 0.1):
         )
     
     elif provider == "ollama":
-        # Ollama debe de estar corriendo al momenot
+        # Llama 3.2 local
+        # Leemos la URL de Docker, o usamos localhost si estamos fuera de Docker
+        ollama_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
         return ChatOllama(
-            model="qwen2.5:7b",
-            temperature=temperature
+            model="llama3.2",
+            temperature=temperature,
+            base_url=ollama_url
         )
     
     else:
