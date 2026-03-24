@@ -1,0 +1,58 @@
+# ========================================
+# Entornos Virtuales y Variables de Entorno
+# ========================================
+.env
+.venv/
+venv/
+env/
+
+# ========================================
+# Archivos de Python y Caché
+# ========================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ========================================
+# Bases de datos y Datos Generados
+# ========================================
+# Ignoramos la DB porque los usuarios deben generarla con seed_db.py
+*.db
+*.sqlite
+*.sqlite3
+
+# Opcional: Ignorar los reportes de RAGAS generados dinámicamente
+# Descomenta la siguiente línea si NO quieres subir el JSON de resultados a GitHub
+# evaluation/metrics_report.json
+
+# ========================================
+# Archivos de Sistema Operativo y Editores
+# ========================================
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ========================================
+# Caché de HuggingFace / RAGAS / LangChain
+# ========================================
+.cache/
+.huggingface/

@@ -1,0 +1,6 @@
+question,ground_truth
+¿Cuántos clientes tenemos registrados?,Tenemos 3 clientes registrados.
+¿Cuál es el correo de John Smith?,El correo de John Smith es john@email.com.
+¿Cuántos pedidos hay con estado pending?,Hay 1 pedido con estado pending.
+¿Cuál es el monto total del pedido del cliente Ana Garcia?,Ana Garcia tiene dos pedidos que suman 350.50 en total.
+¿Cuántos clientes son de Japón?,No hay clientes de Japón registrados en la base de datos.
